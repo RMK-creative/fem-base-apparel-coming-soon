@@ -14,7 +14,13 @@ body {
   font-size: 16px;
   font-family: "Josefin Sans", sans-serif;
 
-  /* background-image: url(/images/bg-pattern-desktop.svg); */
+  display: grid;
+  place-content: center;
+
+  background-image: url(/images/bg-pattern-desktop.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
 }
 
 a {
@@ -22,26 +28,25 @@ a {
   color: inherit;
 }
 
-.header {
-  padding: 2rem;
-}
-
 .logo {
   width: 100px;
 }
 
-.hero-img {
-  width: 100%;
-  min-height: 250px;
-  background-image: url(./images/hero-mobile.jpg);
-  background-repeat: no-repeat;
-}
-
-/* .main-content {
+.main {
   display: flex;
   flex-direction: column;
   align-items: center;
-} */
+}
+
+.header {
+  display: inline-block;
+  padding: 2rem;
+  align-self: flex-start;
+}
+
+.main-img {
+  min-width: 100%;
+}
 
 .main-text {
   margin-top: 4rem;
@@ -79,7 +84,7 @@ a {
 
 .btn {
   border: none;
-  background: linear-gradient(#f8bfbf, #ee8b8b);
+  background: linear-gradient(160deg, #f8bfbf, #ee8b8b);
   padding: 0.8rem 1.5rem;
   border-radius: 2rem;
   position: absolute;
@@ -95,14 +100,68 @@ a {
   width: 100%;
 }
 
-::placeholder {
+input::placeholder {
   color: rgba(206, 152, 152, 0.5);
   letter-spacing: 1px;
+  font-size: 0.875rem;
   padding-left: 0.5rem;
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-  color: #ee8b8b;
+@media only screen and (min-width: 43.75rem) {
+  .logo {
+    width: 158px;
+  }
+
+  .main {
+    display: grid;
+    grid-template-rows: 50px 750px;
+    grid-template-columns: 830px 610px;
+  }
+
+  .header {
+    margin: 4rem 10rem 0;
+    padding: 0;
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .main-image {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .main-text {
+    text-align: left;
+    margin-left: 10rem;
+    max-width: 26rem;
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .main-heading {
+    font-size: 4rem;
+  }
+
+  .main-copy {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 1rem 2.5rem;
+    transform: translateX(-5.5rem);
+  }
+
+  .form-input {
+    padding: 1.2rem;
+  }
+
+  input::placeholder {
+    font-size: 1rem;
+  }
 }
