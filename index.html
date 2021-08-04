@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
     <link
       rel="icon"
@@ -22,13 +21,16 @@
     <title>Frontend Mentor | Base Apparel coming soon page</title>
   </head>
   <body>
-    <header class="header">
-      <img src="/images/logo.svg" alt="logo" />
-    </header>
-    <main class="main-content">
-      <section class="hero">
-        <div class="hero-img"></div>
-      </section>
+    <main class="main">
+      <div class="header">
+        <img class="logo" src="/images/logo.svg" alt="logo" />
+      </div>
+      <div class="main-image">
+        <picture>
+          <source media="(min-width:650px)" srcset="/images/hero-desktop.jpg" />
+          <img src="/images/hero-mobile.jpg" alt="" style="width: auto" />
+        </picture>
+      </div>
 
       <section class="main-text">
         <h1 class="main-heading">
@@ -55,14 +57,5 @@
         </form>
       </section>
     </main>
-
-    <footer>
-      <p class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="#">RMK</a>.
-      </p>
-    </footer>
   </body>
 </html>
