@@ -107,7 +107,24 @@ input::placeholder {
   padding-left: 0.5rem;
 }
 
-@media only screen and (min-width: 43.75rem) {
+.form-error,
+.form-error-icon {
+  /* display: none; */
+}
+
+.form-error {
+  color: #f96464;
+  padding: 0.5rem 1.8rem;
+  font-size: 0.8125rem;
+}
+
+.form-error-icon {
+  position: absolute;
+  top: 1rem;
+  left: 18rem;
+}
+
+@media only screen and (min-width: 53.125rem) {
   .logo {
     width: 158px;
   }
@@ -115,7 +132,10 @@ input::placeholder {
   .main {
     display: grid;
     grid-template-rows: 50px 750px;
-    grid-template-columns: 830px 610px;
+    grid-template-columns: minmax(min-content, 51.875rem) minmax(
+        min-content,
+        38.125rem
+      );
   }
 
   .header {
