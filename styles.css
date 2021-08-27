@@ -107,18 +107,28 @@ input::placeholder {
   padding-left: 0.5rem;
 }
 
-.form-error,
-.form-error-icon {
-  /* display: none; */
+.form-success.active {
+  color: rgb(3, 170, 25);
+  display: block;
+  padding: 0.5rem 1.8rem;
+  font-size: 0.8125rem;
 }
 
-.form-error {
+.form-success,
+.form-error,
+.form-error-icon {
+  display: none;
+}
+
+.form-error.active {
+  display: block;
   color: #f96464;
   padding: 0.5rem 1.8rem;
   font-size: 0.8125rem;
 }
 
-.form-error-icon {
+.form-error-icon.active {
+  display: inline;
   position: absolute;
   top: 1rem;
   left: 18rem;
