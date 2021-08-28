@@ -50,6 +50,7 @@ a {
 
 .main-text {
   margin-top: 6rem;
+  margin-bottom: 2rem;
   text-align: center;
   display: grid;
   place-content: center;
