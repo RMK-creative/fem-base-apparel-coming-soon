@@ -112,6 +112,7 @@ input::placeholder {
   display: block;
   padding: 0.5rem 1.8rem;
   font-size: 0.8125rem;
+  position: absolute;
 }
 
 .form-success,
@@ -125,6 +126,7 @@ input::placeholder {
   color: #f96464;
   padding: 0.5rem 1.8rem;
   font-size: 0.8125rem;
+  position: absolute;
 }
 
 .form-error-icon.active {
